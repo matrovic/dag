@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact us | DAG International Ltd</title>
+<meta name="description" content="Phone, WhatsApp, email and address of DAG International Ltd.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="DAG International Ltd, Digital Arts home"><img src="assets/logo.png" alt="Digital Arts, empowered by innovation"></a>
+    <button id="tg" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="cta" href="contact.html">Contact us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+<section id="contact">
+  <div class="wrap contact">
+    <div class="info">
+      <h2>Contact us</h2>
+      <p style="color:var(--muted)">Call, email or send a message. We reply with a plan and a quote.</p>
+      <a href="tel:+256751985440"><b>Phone</b><span>0751985440</span></a>
+      <a href="https://wa.me/256751985440"><b>WhatsApp</b><span>Message 0751985440</span></a>
+      <a href="mailto:matovuabdul81@gmail.com"><b>Email</b><span>matovuabdul81@gmail.com</span></a>
+      <div><b>Address</b><span>Nansana Ashinaga, Uganda</span></div>
+    </div>
+    <form id="f" novalidate>
+      <label>Your name<input id="n" autocomplete="name" placeholder="Full name" required></label>
+      <label>Phone or email<input id="c" autocomplete="email" placeholder="How can we reach you?" required></label>
+      <label>What do you need?<textarea id="m" placeholder="For example: a website for my shop, or an accounting system" required></textarea></label>
+      <button class="btn red" type="submit">Send message</button>
+      <p id="msg" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> DAG International Ltd. All rights reserved.</span>
+    <span class="flinks"><a href="terms.html">Terms and conditions</a><a href="privacy.html">Privacy policy</a><a href="refund.html">Refund policy</a></span>
+    <em>Empowered by innovation</em>
+  </div>
+</footer>
+<script>
+document.getElementById("y").textContent=new Date().getFullYear();
+var tg=document.getElementById("tg"),nav=document.getElementById("nav");
+tg.addEventListener("click",function(){var o=nav.classList.toggle("open");tg.setAttribute("aria-expanded",o)});
+nav.addEventListener("click",function(e){if(e.target.tagName==="A"){nav.classList.remove("open");tg.setAttribute("aria-expanded","false")}});
+document.getElementById("f").addEventListener("submit",function(e){
+  e.preventDefault();
+  var n=document.getElementById("n").value.trim(),c=document.getElementById("c").value.trim(),m=document.getElementById("m").value.trim(),out=document.getElementById("msg");
+  if(!n||!c||!m){out.textContent="Please fill in your name, contact and message.";return}
+  out.textContent="Opening your email app. Press send to finish.";
+  window.location.href="mailto:matovuabdul81@gmail.com?subject="+encodeURIComponent("Website enquiry from "+n)+"&body="+encodeURIComponent("Name: "+n+"\nContact: "+c+"\n\n"+m);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DAG International Ltd | Digital Arts, ICT Solutions in Uganda</title>
+<meta name="description" content="DAG International Ltd (Digital Arts) builds software, websites, networks and digital marketing for businesses in Uganda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="DAG International Ltd, Digital Arts home"><img src="assets/logo.png" alt="Digital Arts, empowered by innovation"></a>
+    <button id="tg" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a aria-current="page" href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="cta" href="contact.html">Contact us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+<section id="home" class="hero">
+  <div class="wrap">
+    <div>
+      <h1>ICT solutions built around your business.</h1>
+      <p class="lead">DAG International Ltd designs software, websites and networks to fit your size, your budget and your deadline, then supports them after launch.</p>
+      <div class="btns">
+        <a class="btn red" href="contact.html">Request a quote</a>
+        <a class="btn line" href="tel:+256751985440">Call 0751985440</a>
+      </div>
+    </div>
+    <div class="shot"><img src="assets/hero.jpg" alt="Code open on a laptop in a developer’s workspace"></div>
+  </div>
+</section>
+<div class="facts">
+  <div class="wrap"><ul>
+    <li>Software<span>Apps and systems</span></li>
+    <li>Websites<span>Design and hosting</span></li>
+    <li>Networks<span>Cabling to firewalls</span></li>
+    <li>Marketing<span>SEO, ads, social</span></li>
+  </ul></div>
+</div>
+<section><div class="wrap"><div class="about"><div><h2>Built for businesses in Uganda</h2><p>DAG International Ltd builds systems that are tailor-fit to the size, budget and needs of each customer. Our team of young qualified engineers delivers customized solutions on time and on budget.</p><p><a class="btn line" href="about.html">About us</a></p></div><img src="assets/ict.jpg" alt="Information and communications technology graphic" loading="lazy"></div></div></section>
+<section class="alt"><div class="wrap"><h2>What we do</h2><div class="tz">
+<div><h3>Software and apps</h3><p>Mobile apps and business software from requirement analysis to rollout, including accounting and production management.</p><a href="services.html">See services</a></div>
+<div><h3>Websites and marketing</h3><p>Website design, hosting and e-commerce, plus SEO, ads, social media and email marketing.</p><a href="services.html">See services</a></div>
+<div><h3>Networks and ICT support</h3><p>Cabling, wireless, CCTV, firewalls, and managed support for your desktops and servers.</p><a href="services.html">See services</a></div>
+</div></div></section>
+<div class="band-cta"><div class="wrap"><h2>Tell us what you need.</h2><a class="btn red" href="contact.html">Contact us</a></div></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> DAG International Ltd. All rights reserved.</span>
+    <span class="flinks"><a href="terms.html">Terms and conditions</a><a href="privacy.html">Privacy policy</a><a href="refund.html">Refund policy</a></span>
+    <em>Empowered by innovation</em>
+  </div>
+</footer>
+<script>
+document.getElementById("y").textContent=new Date().getFullYear();
+var tg=document.getElementById("tg"),nav=document.getElementById("nav");
+tg.addEventListener("click",function(){var o=nav.classList.toggle("open");tg.setAttribute("aria-expanded",o)});
+nav.addEventListener("click",function(e){if(e.target.tagName==="A"){nav.classList.remove("open");tg.setAttribute("aria-expanded","false")}});
+document.getElementById("f").addEventListener("submit",function(e){
+  e.preventDefault();
+  var n=document.getElementById("n").value.trim(),c=document.getElementById("c").value.trim(),m=document.getElementById("m").value.trim(),out=document.getElementById("msg");
+  if(!n||!c||!m){out.textContent="Please fill in your name, contact and message.";return}
+  out.textContent="Opening your email app. Press send to finish.";
+  window.location.href="mailto:matovuabdul81@gmail.com?subject="+encodeURIComponent("Website enquiry from "+n)+"&body="+encodeURIComponent("Name: "+n+"\nContact: "+c+"\n\n"+m);
+});
+</script>
+</body>
+</html>

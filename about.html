@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About us | DAG International Ltd</title>
+<meta name="description" content="About DAG International Ltd: our mission, vision, purpose and director.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="DAG International Ltd, Digital Arts home"><img src="assets/logo.png" alt="Digital Arts, empowered by innovation"></a>
+    <button id="tg" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a aria-current="page" href="about.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="cta" href="contact.html">Contact us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+<section id="about">
+  <div class="wrap">
+    <div class="about">
+      <div>
+        <h2>About us</h2>
+        <p>DAG International Ltd builds systems that are tailor-fit to the size, budget and needs of each customer. Our customers are empowered by our technical expertise, and we deliver customized solutions on time and on budget.</p>
+        <p>The key to our success is a close working relationship with clients. We learn their objectives so every solution helps them get the most from it. Our backbone is professionals with wide experience in communications and information technology, led by young qualified engineers.</p>
+      </div>
+      <img src="assets/ict.jpg" alt="Information and communications technology graphic" loading="lazy">
+    </div>
+    <div class="triad">
+      <div><h3>Mission</h3><p>To establish ourselves as the best choice in computing and information technology services by offering the full spectrum of services.</p></div>
+      <div><h3>Vision</h3><p>To become an entity in technology-based corporate solutions, capable of earning a response from the niche we serve.</p></div>
+      <div><h3>Purpose</h3><p>To achieve customer satisfaction by delivering quality products and services at an affordable cost and in a timely manner.</p></div>
+    </div>
+    <div class="dir">
+      <img src="assets/dir.jpg" alt="Matovu Abdul, Director" loading="lazy">
+      <div>
+        <h3>Word from the director</h3>
+        <p>We strive to ensure our customers’ satisfaction in whatever service we offer. Our major role is to bridge the digital divide and help businesses prosper and perform at their best through the best ICT services.</p>
+        <p><b>Matovu Abdul</b>, Director</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> DAG International Ltd. All rights reserved.</span>
+    <span class="flinks"><a href="terms.html">Terms and conditions</a><a href="privacy.html">Privacy policy</a><a href="refund.html">Refund policy</a></span>
+    <em>Empowered by innovation</em>
+  </div>
+</footer>
+<script>
+document.getElementById("y").textContent=new Date().getFullYear();
+var tg=document.getElementById("tg"),nav=document.getElementById("nav");
+tg.addEventListener("click",function(){var o=nav.classList.toggle("open");tg.setAttribute("aria-expanded",o)});
+nav.addEventListener("click",function(e){if(e.target.tagName==="A"){nav.classList.remove("open");tg.setAttribute("aria-expanded","false")}});
+document.getElementById("f").addEventListener("submit",function(e){
+  e.preventDefault();
+  var n=document.getElementById("n").value.trim(),c=document.getElementById("c").value.trim(),m=document.getElementById("m").value.trim(),out=document.getElementById("msg");
+  if(!n||!c||!m){out.textContent="Please fill in your name, contact and message.";return}
+  out.textContent="Opening your email app. Press send to finish.";
+  window.location.href="mailto:matovuabdul81@gmail.com?subject="+encodeURIComponent("Website enquiry from "+n)+"&body="+encodeURIComponent("Name: "+n+"\nContact: "+c+"\n\n"+m);
+});
+</script>
+</body>
+</html>
